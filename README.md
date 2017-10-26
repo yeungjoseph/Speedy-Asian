@@ -1,12 +1,15 @@
 # Dumpling Express
-3D Infinite Runner game (Video Game Dev Club Fall 2017)
 
-Authors:
+Synopsis
+A 3D Infinite Runner mobile game for Android and iOS (Video Game Dev Club Fall 2017)
+
+Built With
+-
+- Unity
+
+Authors
+-
 Jackie Luu
 Joseph Yeung
 Justin Lee
 Ricky Thai
-
-A 3D Infinite Runner for Android and iOS.
-
-Created with Unity.
