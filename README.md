@@ -1,7 +1,7 @@
 # Dumpling Express
 
 Synopsis
-A 3D Infinite Runner mobile game for Android and iOS (Video Game Dev Club Fall 2017)
+A 3D Infinite Runner mobile game for Android and iOS.
 
 Built With
 -
@@ -9,7 +9,10 @@ Built With
 
 Authors
 -
-Jackie Luu
-Joseph Yeung
-Justin Lee
-Ricky Thai
+- Jackie Luu
+- Joseph Yeung
+- Justin Lee
+- Ricky Thai
+
+
+Video Game Dev Club Fall 2017
