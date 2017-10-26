@@ -2,7 +2,7 @@
 
 Synopsis
 -
-A single-player 3D Infinite Runner mobile game for Android and iOS. This is a quarter-long video game project with Video Game Development Club (Fall 2017).
+A single-player 3D Infinite Runner mobile game for Android and iOS.
 
 Built With
 -
@@ -14,4 +14,8 @@ Authors
 - Joseph Yeung
 - Justin Lee
 - Ricky Thai
+
+Awknowledgements
+-
+Video Game Development Club (UCI Fall 2017)
 
