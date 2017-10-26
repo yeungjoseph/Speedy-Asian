@@ -1,7 +1,7 @@
 # Dumpling Express
 
 Synopsis
-A 3D Infinite Runner mobile game for Android and iOS.
+A single-player 3D Infinite Runner mobile game for Android and iOS. This is a quarter-long video game project with Video Game Development Club (Fall 2017).
 
 Built With
 -
@@ -14,5 +14,3 @@ Authors
 - Justin Lee
 - Ricky Thai
 
-
-Video Game Dev Club Fall 2017
