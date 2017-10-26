@@ -18,8 +18,10 @@ public class PathTrigger : MonoBehaviour {
     private void OnTriggerEnter(Collider other)
     {
         //Create a new road at the position the last road began + length of a road
-        Instantiate(pathPrefab, new Vector3(transform.parent.parent.position.x, transform.parent.parent.position.y,
+        Transform path = Instantiate(pathPrefab, new Vector3(transform.parent.parent.position.x, transform.parent.parent.position.y,
             transform.parent.parent.position.z + 76f), pathPrefab.rotation);
+        path.name = "Path_of_10_1";
+
         transform.parent.parent.gameObject.AddComponent<TimeToDestroy>();
     }
 }

@@ -4,21 +4,40 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour {
     [SerializeField]
-    Transform target;
+    private Transform target;
+    private Vector3 offset;
+    private Vector3 moveVector;
 
-    Vector3 offset;
+    //Starting animation
+    private float transition = 0.0f;
+    private float animationDuration = 3.0f;
+    private Vector3 animationOffset = new Vector3(0, 5, 5);
 
 	void Start ()
     {
         //Find constant distance between camera and player
-        offset = target.transform.position - this.transform.position;
+        offset = this.transform.position - target.transform.position;
 	}
 	
 
 	void Update ()
     {
-        Vector3 camera_pos = target.transform.position - offset;
-        //Smoothly transition camera position
-        this.transform.position = Vector3.Lerp(this.transform.position, camera_pos, 1.5f);
+        moveVector = target.transform.position + offset;
+        // X
+        moveVector.x = 0;
+        // Y
+        moveVector.y = Mathf.Clamp(moveVector.y, 2f, 5f);
+
+        if (transition > 1.0f)
+        {
+            transform.position = moveVector;
+        }
+        else
+        {
+            // Animation at the start of the game
+            transform.position = Vector3.Lerp(moveVector + animationOffset, moveVector, transition);
+            // When 1 second passes, transition = 0.5, 2 seconds -> transition = 1 (fully moved)
+            transition += Time.deltaTime * 1 / animationDuration;
+        }
 	}
 }
