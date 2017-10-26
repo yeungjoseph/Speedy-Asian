@@ -1,4 +1,4 @@
-# Speedy-Asian
+# Dumpling Express
 3D Infinite Runner game (Video Game Dev Club Fall 2017)
 
 Authors:
