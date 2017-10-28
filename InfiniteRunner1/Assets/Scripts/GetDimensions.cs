@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// This script is used for debugging
+
 public class GetDimensions : MonoBehaviour {
 
 	// Use this for initialization

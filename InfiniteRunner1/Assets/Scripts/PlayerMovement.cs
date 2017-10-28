@@ -2,17 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour {
+public class PlayerMovement : MonoBehaviour {
     private CharacterController controller;
 
-    //Movement
+    // Movement
     [SerializeField]
     private int speed;
     private Vector3 moveVector;
     private float verticalVelocity = 0.0f;
     private float gravity = 12.0f;
+    [SerializeField]
+    private float jumpForce = 6.0f;
+    private float canJump = 0f;
 
-    //Animator for jump
+    // Animator for jump
     private Animator anim;
 
 
@@ -27,7 +30,18 @@ public class Player : MonoBehaviour {
 
         if (controller.isGrounded)
         {
+            // Stick player on the floor a lil bit
             verticalVelocity = -0.5f;
+
+            float jump = Input.GetAxisRaw("Vertical");
+            if (jump == 1 && Time.time > canJump)
+            {
+                verticalVelocity = jumpForce;
+                anim.Play("Jumping");
+
+                // Delay for jump
+                canJump = Time.time + 1.1f;
+            }
         }
         else
         {
@@ -42,32 +56,5 @@ public class Player : MonoBehaviour {
         moveVector.z = speed;
 
         controller.Move(moveVector * Time.deltaTime);
-    }
-
-    /*
-	void FixedUpdate ()
-    { 
-        //Jump on LMB
-		if(Input.GetMouseButtonDown(0))
-        {
-            rb.AddForce(0f, 6f, 0f, ForceMode.Impulse);
-            anim.Play("Jumping");
-        }
-        rb.velocity = new Vector3(0f, rb.velocity.y, speed);
-  
-	}*/
-
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.CompareTag("Water"))
-        {
-            GameOver();
-        }
-    }
-
-    private void GameOver()
-    {
-        Debug.Log("Game is over");
     }
 }
