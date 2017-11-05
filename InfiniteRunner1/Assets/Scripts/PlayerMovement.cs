@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour {
     private int speed;
     private Vector3 moveVector;
     private float verticalVelocity = 0.0f;
-    private float gravity = 12.0f;
+    private float gravity = 18.0f;
     [SerializeField]
     private float jumpForce = 6.0f;
     private float canJump = 0f;
@@ -40,7 +40,7 @@ public class PlayerMovement : MonoBehaviour {
                 anim.Play("Jumping");
 
                 // Delay for jump
-                canJump = Time.time + 1.1f;
+                canJump = Time.time + .9f; // Delay for jump
             }
         }
         else

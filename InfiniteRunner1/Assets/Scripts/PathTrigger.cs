@@ -22,6 +22,14 @@ public class PathTrigger : MonoBehaviour {
             transform.parent.parent.position.z + 76f), pathPrefab.rotation);
         path.name = "Path_of_10_1";
 
+        IncrementPathCount();
         transform.parent.parent.gameObject.AddComponent<TimeToDestroy>();
+    }
+
+    private void IncrementPathCount()
+    {
+        GameObject player = GameObject.Find("Player");
+        Score score_script = player.GetComponent<Score>();
+        score_script.numPaths++;
     }
 }

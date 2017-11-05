@@ -6,7 +6,7 @@ public class PlayerDeath : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Water"))
+        if (other.gameObject.CompareTag("Obstacle"))
         {
             GameOver();
         }
