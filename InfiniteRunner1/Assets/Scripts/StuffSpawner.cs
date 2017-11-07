@@ -39,12 +39,16 @@ public class StuffSpawner : MonoBehaviour {
         if (Random.Range(0,10) < 10) 
         {
             //Spawn obstacle
+            float flip_rotation = (Random.Range(0, 10) < 5) ? 180f : 0f;
+            Vector3 new_rotation = obstaclePrefab.rotation.eulerAngles;
+            new_rotation = new Vector3(new_rotation.x, new_rotation.y + flip_rotation, new_rotation.z);
             float fence_size = 0.3f;
             float min_x = MIN_X_BOUND + x_size / 2 + fence_size;
             float max_x = MAX_X_BOUND - x_size / 2 - fence_size;
+
   
             Transform obstacle = Instantiate(obstaclePrefab, new Vector3(
-                Random.Range(min_x,max_x),y_size/2,Random.Range(z_min,z_max)), obstaclePrefab.rotation);
+                Random.Range(min_x,max_x), 0f, Random.Range(z_min,z_max)), Quaternion.Euler(new_rotation)); 
             obstacle.name = "obstacle";
             obstacle.gameObject.AddComponent<TimeToDestroy>();
         }
