@@ -1,11 +1,15 @@
 fileFormatVersion: 2
 guid: cac7c4aee2b132c4fa4f1a4f65d1ad2f
-timeCreated: 1509848571
+timeCreated: 1510436385
 licenseType: Free
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - cowPrefab: {fileID: 4054502789990554, guid: 9ec060093457ad84ca2733cb15c2c41e,
+      type: 2}
+  - stumpPrefab: {fileID: 4136895975620530, guid: 4929162ae44d18a45b2f6000039fedc7,
+      type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
