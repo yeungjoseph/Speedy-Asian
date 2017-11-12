@@ -2258,8 +2258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cowPrefab: {fileID: 4054502789990554, guid: 9ec060093457ad84ca2733cb15c2c41e, type: 2}
-  stumpPrefab: {fileID: 4136895975620530, guid: 4929162ae44d18a45b2f6000039fedc7,
-    type: 2}
+  cratePrefab: {fileID: 469634, guid: 9b6991010b9adf94c91a6460396236ef, type: 2}
 --- !u!114 &114702346308361796
 MonoBehaviour:
   m_ObjectHideFlags: 1

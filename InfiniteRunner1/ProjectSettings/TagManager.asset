@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Water
   - Obstacle
+  - Gem
   layers:
   - Default
   - TransparentFX

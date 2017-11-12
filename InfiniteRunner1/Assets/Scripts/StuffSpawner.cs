@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StuffSpawner : MonoBehaviour {
     public Transform cowPrefab;
-    public Transform stumpPrefab;
+    public Transform cratePrefab;
     private float MIN_X_BOUND = -2.35f;
     private float MAX_X_BOUND = 2.35f;
     private float fence_size = 0.3f;
@@ -28,9 +28,9 @@ public class StuffSpawner : MonoBehaviour {
             float x_size = cowPrefab.GetComponent<Renderer>().bounds.size.x;
             SpawnCow(x_size, start_z, start_z + 7.6f);
 
-            x_size = stumpPrefab.GetComponent<Renderer>().bounds.size.x;
-            float y_size = stumpPrefab.GetComponent<Renderer>().bounds.size.y;
-            SpawnStump(x_size, y_size, start_z, start_z + 7.6f);
+            x_size = cratePrefab.GetComponent<Renderer>().bounds.size.x;
+            float y_size = cratePrefab.GetComponent<Renderer>().bounds.size.y;
+            SpawnCrate(x_size, y_size, start_z, start_z + 7.6f);
 
             start_z += 7.6f;
         }
@@ -46,7 +46,7 @@ public class StuffSpawner : MonoBehaviour {
         float max_x = MAX_X_BOUND - x_size / 2 - fence_size;
         Vector3 spawnPos = new Vector3(Random.Range(min_x, max_x), 0f, Random.Range(z_min, z_max));
 
-        if (IsSpawnAvailable(spawnPos) && Random.Range(0,10) < 10) 
+        if (IsSpawnAvailable(spawnPos, 0.1f) && Random.Range(0,10) < 10) 
         {
             float flip_rotation = (Random.Range(0, 10) < 5) ? 180f : 0f;
             Vector3 new_rotation = cowPrefab.rotation.eulerAngles;
@@ -58,23 +58,23 @@ public class StuffSpawner : MonoBehaviour {
         }
     }
 
-    private void SpawnStump(float x_size, float y_size, float z_min, float z_max)
+    private void SpawnCrate(float x_size, float y_size, float z_min, float z_max)
     {
         float min_x = MIN_X_BOUND + x_size / 2 + fence_size;
         float max_x = MAX_X_BOUND - x_size / 2 - fence_size;
         Vector3 spawnPos = new Vector3(Random.Range(min_x, max_x), y_size / 2f, Random.Range(z_min, z_max));
 
-        if (IsSpawnAvailable(spawnPos) && Random.Range(0,10) < 10)
+        if (IsSpawnAvailable(spawnPos, 0.4f) && Random.Range(0,10) < 10)
         {
-            Transform stump = Instantiate(stumpPrefab, spawnPos, stumpPrefab.rotation);
-            stump.name = "stump";
-            stump.gameObject.AddComponent<TimeToDestroy>();
+            Transform crate = Instantiate(cratePrefab, spawnPos, cratePrefab.rotation);
+            crate.name = "crate";
+            crate.gameObject.AddComponent<TimeToDestroy>();
         }
     }
 
-    private bool IsSpawnAvailable(Vector3 spawnPosition)
+    private bool IsSpawnAvailable(Vector3 spawnPosition, float precision)
     {
-        if (Physics.OverlapSphere(spawnPosition, 0.3f).Length > 1) //Touching more than just ground 
+        if (Physics.OverlapSphere(spawnPosition, precision).Length > 1) //Touching more than just ground 
         {
             return false;
         }

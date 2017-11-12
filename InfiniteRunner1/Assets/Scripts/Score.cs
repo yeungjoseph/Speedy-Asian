@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Score : MonoBehaviour {
     public int numPaths = 0;
-    float score = 0f;
+    public float score = 0f;
     [SerializeField]
     Text score_text;
 
