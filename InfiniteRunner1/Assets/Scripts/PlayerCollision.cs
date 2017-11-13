@@ -8,7 +8,6 @@ using UnityEngine;
  score script to update the score upon picking up a collectable.
 */
 public class PlayerCollision : MonoBehaviour {
-    public AudioClip diesound;
     public AudioClip cowsound;
     public AudioClip cratesound;
     public AudioClip gemsound;
@@ -24,19 +23,16 @@ public class PlayerCollision : MonoBehaviour {
         if (other.gameObject.CompareTag("Obstacle"))
         {
             GameOver();
-            source.PlayOneShot(diesound, 0.5f);
             source.PlayOneShot(cratesound, 0.25f);
         }
             if (other.gameObject.CompareTag("crate"))
         {
             GameOver();
-            source.PlayOneShot(diesound, 0.5f);
             source.PlayOneShot(cratesound, 0.25f);
         }
         if (other.gameObject.CompareTag("Cow"))
         {
             GameOver();
-            source.PlayOneShot(diesound, 0.5f);
             source.PlayOneShot(cowsound, 1f);
         }
 

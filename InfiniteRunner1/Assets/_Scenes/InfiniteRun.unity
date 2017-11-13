@@ -307,7 +307,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef5c0b72f5ddaba4da84ca7cfff79720, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  diesound: {fileID: 8300000, guid: 4c8d59a488d24c341aa2b7ce61d6591a, type: 3}
   cowsound: {fileID: 8300000, guid: f4c2222571c4519468c322989f19c742, type: 3}
   cratesound: {fileID: 8300000, guid: 355e153d330945c4e958cf4521589ae7, type: 3}
   gemsound: {fileID: 8300000, guid: 60a995b2c9b1ae34eaddceafa96b3f27, type: 3}
@@ -1039,7 +1038,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4964ccf649cd3cd42af60e8aa38c861d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: efbb06c06fbfcc244b3663b73581110b, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
