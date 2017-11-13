@@ -8,9 +8,13 @@ using UnityEngine.UI;
  as collectable pickups and death conditions. It utilizes the
  score script to update the score upon picking up a collectable.
 */
+<<<<<<< HEAD
 public class PlayerCollision : MonoBehaviour
 {
     //Audio variables
+=======
+public class PlayerCollision : MonoBehaviour {
+>>>>>>> a5b53055add8c290c5753e2dca286ad29b515d10
     public AudioClip cowsound;
     public AudioClip cratesound;
     public AudioClip gemsound;
