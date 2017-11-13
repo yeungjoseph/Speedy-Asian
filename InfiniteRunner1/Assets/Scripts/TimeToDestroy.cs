@@ -2,16 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ Garbage collection script.
+*/
 public class TimeToDestroy : MonoBehaviour
 {
     public float destroyTime = 30f;
     private float currentTime;
-
-    // Use this for initialization
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
     void Update()

@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ This script moves the camera based on the offset between itself and
+ the player (camera sticks to player). The beginning camera animation
+ is also included here.
+*/
 public class CameraMovement : MonoBehaviour {
     [SerializeField]
     private Transform target;

@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ This script is responsible for all of the character's movements
+ and animations. A non-physics conforming character controller
+ is used to move the character.
+*/
 public class PlayerMovement : MonoBehaviour {
     private CharacterController controller;
 
@@ -30,7 +35,7 @@ public class PlayerMovement : MonoBehaviour {
 
         if (controller.isGrounded)
         {
-            // Stick player on the floor a lil bit
+            // Stick player on the floor a little bit
             verticalVelocity = -0.5f;
 
             float jump = Input.GetAxisRaw("Vertical");
@@ -39,8 +44,8 @@ public class PlayerMovement : MonoBehaviour {
                 verticalVelocity = jumpForce;
                 anim.Play("Jumping");
 
-                // Delay for jump
-                canJump = Time.time + .9f; // Delay for jump
+                // Delay for next jump
+                canJump = Time.time + .9f;
             }
         }
         else

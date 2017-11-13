@@ -2259,6 +2259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cowPrefab: {fileID: 4054502789990554, guid: 9ec060093457ad84ca2733cb15c2c41e, type: 2}
   cratePrefab: {fileID: 469634, guid: 9b6991010b9adf94c91a6460396236ef, type: 2}
+  gemPrefab: {fileID: 4509811703900776, guid: 29f76b6c89b2fea428630f6efa2592f4, type: 2}
 --- !u!114 &114702346308361796
 MonoBehaviour:
   m_ObjectHideFlags: 1

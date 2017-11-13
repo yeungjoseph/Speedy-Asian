@@ -2,18 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ This script infinitely spawns the wave background with
+ automatic garbage collection.
+*/
 public class WaveTrigger : MonoBehaviour {
     public Transform wavePrefab;
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     private void OnTriggerEnter(Collider other)
     {

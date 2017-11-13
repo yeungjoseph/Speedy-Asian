@@ -2,18 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ This script detects when a player enters a trigger area in
+ the path and appends a new path at the end of the current path
+ to create an infinite road. It also works with the score script
+ to keep track of the number of paths traversed.
+*/
 public class PathTrigger : MonoBehaviour {
     public Transform pathPrefab;
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     private void OnTriggerEnter(Collider other)
     {
