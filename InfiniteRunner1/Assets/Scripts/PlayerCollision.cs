@@ -9,25 +9,42 @@ using UnityEngine;
 */
 public class PlayerCollision : MonoBehaviour {
     public AudioClip diesound;
+    public AudioClip cowsound;
+    public AudioClip cratesound;
+    public AudioClip gemsound;
     private AudioSource source;
 
     void Start()
     {
         source = GetComponent<AudioSource>();
     }
-        private void OnTriggerEnter(Collider other)
+
+   private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Obstacle"))
         {
             GameOver();
-            source.PlayOneShot(diesound, 1f);
-            
+            source.PlayOneShot(diesound, 0.5f);
+            source.PlayOneShot(cratesound, 0.2f);
+        }
+            if (other.gameObject.CompareTag("crate"))
+        {
+            GameOver();
+            source.PlayOneShot(diesound, 0.5f);
+            source.PlayOneShot(cratesound, 0.75f);
+        }
+        if (other.gameObject.CompareTag("Cow"))
+        {
+            GameOver();
+            source.PlayOneShot(diesound, 0.5f);
+            source.PlayOneShot(cowsound, 1f);
         }
 
         else if (other.gameObject.CompareTag("Gem"))
         {
             IncreaseScoreBy(50f);
             Destroy(other.gameObject);
+            source.PlayOneShot(gemsound, 1f);
         }
     }
 

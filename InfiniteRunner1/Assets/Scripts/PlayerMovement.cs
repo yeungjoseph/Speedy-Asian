@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour {
             float jump = Input.GetAxisRaw("Vertical");
             if (jump == 1 && Time.time > canJump)
             {
-                source.PlayOneShot(jumpsound, 1f);
+                source.PlayOneShot(jumpsound, 0.25f);
                 verticalVelocity = jumpForce;
                 anim.Play("Jumping");
 
