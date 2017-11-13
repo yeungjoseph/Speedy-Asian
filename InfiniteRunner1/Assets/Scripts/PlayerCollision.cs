@@ -3,12 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerCollision : MonoBehaviour {
+    public AudioClip diesound;
+    private AudioSource source;
 
-    private void OnTriggerEnter(Collider other)
+    void Start()
+    {
+        source = GetComponent<AudioSource>();
+    }
+        private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Obstacle"))
         {
             GameOver();
+            source.PlayOneShot(diesound, 1f);
+            
         }
 
         else if (other.gameObject.CompareTag("Gem"))

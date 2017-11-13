@@ -1,11 +1,12 @@
 fileFormatVersion: 2
 guid: ef5c0b72f5ddaba4da84ca7cfff79720
-timeCreated: 1509168128
+timeCreated: 1510532488
 licenseType: Free
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - diesound: {fileID: 8300000, guid: 4c8d59a488d24c341aa2b7ce61d6591a, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

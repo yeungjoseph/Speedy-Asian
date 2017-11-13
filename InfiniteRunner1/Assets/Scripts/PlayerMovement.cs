@@ -18,8 +18,12 @@ public class PlayerMovement : MonoBehaviour {
     // Animator for jump
     private Animator anim;
 
+    // Audio for player
+    public AudioClip jumpsound;
+    private AudioSource source;
 
 	void Start () {
+        source = GetComponent<AudioSource>();
         anim = GetComponent<Animator>();
         controller = this.GetComponent<CharacterController>();
 	}
@@ -36,6 +40,7 @@ public class PlayerMovement : MonoBehaviour {
             float jump = Input.GetAxisRaw("Vertical");
             if (jump == 1 && Time.time > canJump)
             {
+                source.PlayOneShot(jumpsound, 1f);
                 verticalVelocity = jumpForce;
                 anim.Play("Jumping");
 
@@ -57,4 +62,5 @@ public class PlayerMovement : MonoBehaviour {
 
         controller.Move(moveVector * Time.deltaTime);
     }
+
 }
