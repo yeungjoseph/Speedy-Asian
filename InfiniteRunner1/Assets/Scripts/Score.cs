@@ -10,7 +10,7 @@ public class Score : MonoBehaviour {
     public int numPaths = 0;
     public float score = 0f;
     [SerializeField]
-    Text score_text;
+    private Text score_text;
 	
 	// Update is called once per frame
 	void Update () {
