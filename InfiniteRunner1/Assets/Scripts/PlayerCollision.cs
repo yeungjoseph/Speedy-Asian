@@ -61,13 +61,24 @@ public class PlayerCollision : MonoBehaviour {
 
     private void GameOver()
     {
-        //Show score
         death_menu.Show();
+        DisableAll();
+    }
 
-        //Disable player
+    private void DisableAll()
+    {
         player.GetComponent<Collider>().enabled = false;
         player.GetComponent<PlayerMovement>().enabled = false;
         score_script.enabled = false;
+
+        GameObject[] stage = GameObject.FindGameObjectsWithTag("Stage");
+        foreach(GameObject obj in stage)
+        {
+            if (obj.GetComponent<TimeToDestroy>() != null)
+                Destroy(obj.GetComponent<TimeToDestroy>());
+            if (obj.GetComponent<StuffSpawner>() != null)
+                Destroy(obj.GetComponent<StuffSpawner>());
+        }
     }
 }
 

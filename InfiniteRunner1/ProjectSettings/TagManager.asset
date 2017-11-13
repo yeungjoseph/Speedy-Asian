@@ -9,6 +9,7 @@ TagManager:
   - Gem
   - Cow
   - crate
+  - Stage
   layers:
   - Default
   - TransparentFX
