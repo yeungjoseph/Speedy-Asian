@@ -15,7 +15,8 @@ public class PlayerCollision : MonoBehaviour {
     {
         source = GetComponent<AudioSource>();
     }
-        private void OnTriggerEnter(Collider other)
+
+   private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Obstacle"))
         {
