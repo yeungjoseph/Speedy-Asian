@@ -25,13 +25,13 @@ public class PlayerCollision : MonoBehaviour {
         {
             GameOver();
             source.PlayOneShot(diesound, 0.5f);
-            source.PlayOneShot(cratesound, 0.2f);
+            source.PlayOneShot(cratesound, 0.25f);
         }
             if (other.gameObject.CompareTag("crate"))
         {
             GameOver();
             source.PlayOneShot(diesound, 0.5f);
-            source.PlayOneShot(cratesound, 0.75f);
+            source.PlayOneShot(cratesound, 0.25f);
         }
         if (other.gameObject.CompareTag("Cow"))
         {
