@@ -61,8 +61,17 @@ public class PlayerCollision : MonoBehaviour {
 
     private void GameOver()
     {
-        death_menu.Show();
+        int score = SetHighScore();
+        death_menu.Show(score);
         DisableAll();
+    }
+
+    private int SetHighScore()
+    {
+        int score = Mathf.RoundToInt(score_script.score);
+        if (PlayerPrefs.GetInt("Highscore") < score)
+            PlayerPrefs.SetInt("Highscore", score);
+        return score;
     }
 
     private void DisableAll()

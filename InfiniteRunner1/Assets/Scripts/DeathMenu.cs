@@ -8,7 +8,6 @@ public class DeathMenu : MonoBehaviour {
 
     [SerializeField]
     private Text final_score;
-    private Score score_script;
     public Image backgroundImg;
 
     //Transition animation
@@ -38,10 +37,9 @@ public class DeathMenu : MonoBehaviour {
         SceneManager.LoadScene("MainMenu");
     }
 
-    public void Show()
+    public void Show(int score)
     {
-        score_script = GameObject.Find("Player").GetComponent<Score>();
-        final_score.text = "Score: " + Mathf.RoundToInt(score_script.score).ToString();
+        final_score.text = "Score: " + score.ToString();
         gameObject.SetActive(true);
         isShown = true;
     }
