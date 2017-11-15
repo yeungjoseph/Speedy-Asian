@@ -1,23 +1,76 @@
 fileFormatVersion: 2
-guid: 61e764f0ae4d74a4798d3104222bfe89
-timeCreated: 1510729950
+guid: 96160882b2b316d468aeb00abd00694a
+timeCreated: 1510783444
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: pCylinder11
-    400000: //RootNode
-    400002: pCylinder11
+    100000: back
+    100002: //RootNode
+    100004: pCylinder1
+    100006: pCylinder10
+    100008: pCylinder11
+    100010: pCylinder2
+    100012: pCylinder3
+    100014: pCylinder4
+    100016: pCylinder5
+    100018: pCylinder6
+    100020: pCylinder7
+    100022: pCylinder8
+    100024: pCylinder9
+    100026: pSphere1
+    100028: pSphere2
+    100030: transform1
+    100032: transform10
+    100034: transform11
+    100036: transform12
+    100038: transform2
+    100040: transform3
+    100042: transform4
+    100044: transform5
+    100046: transform6
+    100048: transform7
+    100050: transform8
+    100052: transform9
+    400000: back
+    400002: //RootNode
+    400004: pCylinder1
+    400006: pCylinder10
+    400008: pCylinder11
+    400010: pCylinder2
+    400012: pCylinder3
+    400014: pCylinder4
+    400016: pCylinder5
+    400018: pCylinder6
+    400020: pCylinder7
+    400022: pCylinder8
+    400024: pCylinder9
+    400026: pSphere1
+    400028: pSphere2
+    400030: transform1
+    400032: transform10
+    400034: transform11
+    400036: transform12
+    400038: transform2
+    400040: transform3
+    400042: transform4
+    400044: transform5
+    400046: transform6
+    400048: transform7
+    400050: transform8
+    400052: transform9
+    2000000: back
     2300000: pCylinder11
     3300000: pCylinder11
     4300000: pCylinder11
+    7400000: Take 001
+    9500000: //RootNode
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: initialShadingGroup
-    second: {fileID: 2100000, guid: e53651b91b602d64f90f951d455883ce, type: 2}
+      name: lambert1
+    second: {fileID: 2100000, guid: 7ce701519f82eb8488a909305225cee1, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -89,7 +142,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
