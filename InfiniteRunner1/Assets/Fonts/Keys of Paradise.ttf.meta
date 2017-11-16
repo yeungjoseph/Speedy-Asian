@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a26116d2a1dab4c42bde0986ed3c13a1
+guid: 0b6b78402ebd4d2418c86ea658c59af0
 timeCreated: 1510625160
 licenseType: Free
 TrueTypeFontImporter:
@@ -13,8 +13,7 @@ TrueTypeFontImporter:
   fontName: Keys of Paradise
   fontNames:
   - Keys of Paradise
-  fallbackFontReferences:
-  - {fileID: 12800000, guid: 0b6b78402ebd4d2418c86ea658c59af0, type: 3}
+  fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
