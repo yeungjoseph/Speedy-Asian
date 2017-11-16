@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class MenuManager : MonoBehaviour
 {
     public Text highscoreText;
-
     private void Start()
     {
         highscoreText.text = "Highscore: " + PlayerPrefs.GetInt("Highscore");
@@ -15,6 +14,6 @@ public class MenuManager : MonoBehaviour
 
     public void ToGame()
 	{
-		SceneManager.LoadScene("InfiniteRun");
+        SceneManager.LoadScene("InfiniteRun");
 	}
 }

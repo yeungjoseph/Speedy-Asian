@@ -1,11 +1,14 @@
 fileFormatVersion: 2
 guid: 2a84cad11b0a4db408e18cf09b3808d0
-timeCreated: 1510564796
+timeCreated: 1510802619
 licenseType: Free
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - final_score: {instanceID: 0}
+  - backgroundImg: {instanceID: 0}
+  - buttonsound: {fileID: 8300000, guid: 1d989d6e4001b554a9951c1562e3cefa, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
