@@ -16,4 +16,10 @@ public class MenuManager : MonoBehaviour
 	{
         SceneManager.LoadScene("InfiniteRun");
 	}
+
+	public void ToOptions()
+	{
+		SceneManager.LoadScene ("OptionsUI");
+	}
+		
 }
