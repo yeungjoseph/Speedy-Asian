@@ -4,6 +4,15 @@ Synopsis
 -
 A single-player 3D Infinite Runner mobile game for Windows, Android and iOS.
 
+*Features*
+For PC:
+- WASD or Arrow keys for movement
+
+For all platforms:
+- High score saved across games
+- Volume settings saved locally
+
+
 Built With
 --
 - Unity
