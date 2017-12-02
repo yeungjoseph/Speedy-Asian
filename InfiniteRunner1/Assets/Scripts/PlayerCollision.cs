@@ -74,6 +74,7 @@ public class PlayerCollision : MonoBehaviour {
         return score;
     }
 
+    //Call during gameover to stop game
     private void DisableAll()
     {
         player.GetComponent<Collider>().enabled = false;

@@ -6,13 +6,6 @@ using UnityEngine.UI;
 
 public class OptionsManager : MonoBehaviour {
 
-	public Slider volumeSlider;
-
-	public void VolumeChanged()
-	{
-		AudioListener.volume = volumeSlider.value;
-	}	
-
 	public void Mute()
 	{
 		AudioListener.pause = !AudioListener.pause;
