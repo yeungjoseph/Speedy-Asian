@@ -42,8 +42,8 @@ public class PlayerMovement : MonoBehaviour {
             // Stick player on the floor a little bit
             verticalVelocity = -0.5f;
 
-            float jump = Input.GetAxisRaw("Vertical");
-            if (jump == 1 && Time.time > canJump)
+            bool jump = Input.GetMouseButtonDown(0) && (Input.mousePosition.y < 7 * Screen.height / 8);
+            if (jump && Time.time > canJump)
             {
                 source.PlayOneShot(jumpsound, 1f);
                 verticalVelocity = jumpForce;
@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour {
         }
 
         // Left & Right
-        moveVector.x = Input.GetAxisRaw("Horizontal") * (0.5f*speed);
+        moveVector.x = Input.acceleration.x * (0.5f*speed);
         // Up & Down
         moveVector.y = verticalVelocity;
         // Forward & Back
