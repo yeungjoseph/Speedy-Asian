@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour {
         }
 
         // Left & Right
-        moveVector.x = Input.acceleration.x * (0.5f*speed);
+        moveVector.x = Input.acceleration.x * (0.75f*speed);
         // Up & Down
         moveVector.y = verticalVelocity;
         // Forward & Back
