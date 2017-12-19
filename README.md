@@ -9,6 +9,10 @@ A single-player 3D Infinite Runner mobile game for Windows, Android and iOS.
 For PC:
 - WASD or Arrow keys for movement
 
+For mobile:
+-Tilt to move left/right
+-Tap screen to jump
+
 For all platforms:
 - High score saved across games
 - Volume settings saved locally
